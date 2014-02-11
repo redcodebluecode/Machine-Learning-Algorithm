@@ -15,3 +15,22 @@ It does a good job with the digits dataset, for example. In the presence of many
 however, KNN can badly break down. This is because the irrelevant features contaminate the distance function, 
 so that the k nearest neighbors are close to the test vector in terms of the irrelevant features, 
 and not the important ones.
+
+1. Brief Introduction
+
+2. Objects
+
+3. Algorithm
+
+4. Advantages
+
+5. Disadvantages
+
+6. Improvement/Variants
+
+7. Explanation in layman term:
+
+
+8. The original paper is from Leo Breiman:
+
+9. Other sources:
