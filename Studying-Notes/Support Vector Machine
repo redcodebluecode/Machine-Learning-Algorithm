@@ -1,2 +1,25 @@
-Something you should know about Support Vector Machine.
+Something you should know about Support Vector Machine:
 
+1. Brief Introduction
+
+2. Objects
+
+3. Algorithm
+
+4. Advantages
+
+5. Disadvantages
+
+6. Improvement/Variants
+
+7. Explanation in layman term:
+http://www.quora.com/Support-Vector-Machines/What-does-support-vector-machine-SVM-mean-in-laymans-terms
+http://www.reddit.com/r/MachineLearning/comments/15zrpp/please_explain_support_vector_machines_svm_like_i/?utm_source=twitterfeed&utm_medium=twitter
+
+8. The original paper is from Leo Breiman:
+
+9. Other sources:
+http://www.cs.columbia.edu/~kathy/cs4701/documents/jason_svm_tutorial.pdf
+http://en.wikipedia.org/wiki/Support_vector_machine
+http://svmlight.joachims.org/
+http://www.statsoft.com/Textbook/Support-Vector-Machines
