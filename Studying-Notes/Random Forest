@@ -41,7 +41,7 @@ For prediction a new sample is pushed down the tree. It is assigned the label of
 (1) Random Forests are a wonderful tool for making predictions considering they do not overfit because of the law of large numbers. Introducing the right kind of randomness makes them accurate classifiers and regressors.
 (2) Single decision trees often have high variance or high bias. Random Forests attempts to mitigate the problems of high variance and high bias by averaging to find a natural balance between the two extremes.
 (3) Considering that Random Forests have few parameters to tune and can be used simply with default parameter settings, they are a simple tool to use without having a model or to produce a reasonable model fast and efficiently.
-(4) Random Forests are easy to learn and use for both professionals and lay people - with little research and programming required and may be used by folks without a strong statistical background. Simply put, you can safely make more accurate predictions without most basic mistakes common to other methods (They are able to deal with unbalanced and missing data).
+(4) Random Forests are easy to learn and use for both professionals and lay people - with little research and programming required and may be used by folks without a strong statistical background. Simply put, you can safely make more accurate predictions without most basic mistakes common to other methods (They are able to deal with unbalanced and missing data, easy to explain).
 (5) Accuracy.
 (6) Runs efficiently on large data bases.  
 (7) Handles thousands of input variables without variable deletion.
@@ -71,6 +71,7 @@ http://qr.ae/hf1Jp
 http://scholar.google.com/citations?view_op=view_citation&hl=en&user=mXSv_1UAAAAJ&citation_for_view=mXSv_1UAAAAJ:d1gkVwhDpl0C
 
 9. Other sources:
+Decision Tree and Random Forest
 http://www.whrc.org/education/indonesia/pdf/DecisionTrees_RandomForest_v2.pdf
 
 http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
