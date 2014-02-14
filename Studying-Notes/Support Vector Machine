@@ -5,6 +5,8 @@ Something you should know about Support Vector Machine:
 2. Objects
 
 3. Algorithm
+(1) Assumptions
+(2) Steps
 
 4. Advantages
 
@@ -16,7 +18,7 @@ Something you should know about Support Vector Machine:
 http://www.quora.com/Support-Vector-Machines/What-does-support-vector-machine-SVM-mean-in-laymans-terms
 http://www.reddit.com/r/MachineLearning/comments/15zrpp/please_explain_support_vector_machines_svm_like_i/?utm_source=twitterfeed&utm_medium=twitter
 
-8. The original paper is from Leo Breiman:
+8. The original paper is from :
 
 9. Other sources:
 http://www.cs.columbia.edu/~kathy/cs4701/documents/jason_svm_tutorial.pdf
