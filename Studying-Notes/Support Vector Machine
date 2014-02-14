@@ -7,6 +7,7 @@ Something you should know about Support Vector Machine:
 3. Algorithm
 (1) Assumptions
 (2) Steps
+Kernal Trick is the essential part of the algorithm. There are multiple choices of the Kernal format.
 
 4. Advantages
 
@@ -25,3 +26,8 @@ http://www.cs.columbia.edu/~kathy/cs4701/documents/jason_svm_tutorial.pdf
 http://en.wikipedia.org/wiki/Support_vector_machine
 http://svmlight.joachims.org/
 http://www.statsoft.com/Textbook/Support-Vector-Machines
+
+10. Further question:
+Why do we want to complicate the situation? For example, solve the classification problem by increase the dimension. 
+Is it more complicate?
+
