@@ -49,3 +49,4 @@ Some techniques, often called ensemble methods, construct more than one decision
 (4) Rotation forest - in which every decision tree is trained by first applying principal component analysis (PCA) on a random subset of the input features.
 
 7. Other sources:
+http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf
