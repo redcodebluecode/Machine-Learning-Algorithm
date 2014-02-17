@@ -4,11 +4,14 @@ Something you should know about Support Vector Machine:
 In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data and recognize patterns, used for classification and regression analysis. An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall on. In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 
 2. Objects
+(1) It is a supervised learning model for classification and regression.
+(2) Kernal Trick is the essential part of the algorithm. There are multiple choices of the Kernal format.
 
 3. Algorithm
 (1) Assumptions
+
 (2) Steps
-Kernal Trick is the essential part of the algorithm. There are multiple choices of the Kernal format.
+
 
 4. Advantages
 
