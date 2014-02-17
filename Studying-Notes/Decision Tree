@@ -12,17 +12,40 @@ Assume that all of the features have finite discrete domains, and there is a sin
 (ii) Regression tree analysis is when the predicted outcome can be considered a real number (e.g. the price of a house, or a patient’s length of stay in a hospital).
 
 3. Algorithm
-A tree can be "learned" by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node has all the same value of the target variable, or when splitting no longer adds value to the predictions. This process of top-down induction of decision trees (TDIDT) is an example of a greedy algorithm, and it is by far the most common strategy for learning decision trees from data.
+(1) A tree can be "learned" by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node has all the same value of the target variable, or when splitting no longer adds value to the predictions. This process of top-down induction of decision trees (TDIDT) is an example of a greedy algorithm, and it is by far the most common strategy for learning decision trees from data.
 In data mining, decision trees can be described also as the combination of mathematical and computational techniques to aid the description, categorisation and generalisation of a given set of data.
 
+(2) There are many specific decision-tree algorithms. Notable ones include:
+(i) ID3 (Iterative Dichotomiser 3)
+(ii) C4.5 (successor of ID3)
+(iii) CART (Classification And Regression Tree)
+(iv) CHAID (CHi-squared Automatic Interaction Detector). Performs multi-level splits when computing classification trees.
+(v) MARS: extends decision trees to better handle numerical data.
+ID3 and CART were invented independently at around same time (b/w 1970-80), yet follow a similar approach for learning decision tree from training tuples.
+
+(3) Algorithms for constructing decision trees usually work top-down, by choosing a variable at each step that best splits the set of items. Different algorithms use different metrics for measuring "best". These generally measure the homogeneity of the target variable within the subsets. Some examples are given below. These metrics are applied to each candidate subset, and the resulting values are combined (e.g., averaged) to provide a measure of the quality of the split.
+(i) Gini Impurity
+(ii) Information Gain
+
 4. Advantages
+(1) Simple to understand and interpret. People are able to understand decision tree models after a brief explanation.
+(2) Requires little data preparation. Other techniques often require data normalisation, dummy variables need to be created and blank values to be removed.
+(3) Able to handle both numerical and categorical data. Other techniques are usually specialised in analysing datasets that have only one type of variable. (For example, relation rules can be used only with nominal variables while neural networks can be used only with numerical variables.)
+(4) Uses a white box model. If a given situation is observable in a model the explanation for the condition is easily explained by boolean logic. (An example of a black box model is an artificial neural network since the explanation for the results is difficult to understand.)
+(5) Possible to validate a model using statistical tests. That makes it possible to account for the reliability of the model.
+(6) Robust. Performs well even if its assumptions are somewhat violated by the true model from which the data were generated.
+(7) Performs well with large datasets. Large amounts of data can be analysed using standard computing resources in reasonable time.
 
 5. Disadvantages
+(1) Decision-tree learners can create over-complex trees that do not generalise well from the training data. (This is known as overfitting.) Mechanisms such as pruning are necessary to avoid this problem.
+(2) There are concepts that are hard to learn because decision trees do not express them easily, such as XOR, parity or multiplexer problems. In such cases, the decision tree becomes prohibitively large. Approaches to solve the problem involve either changing the representation of the problem domain (known as propositionalisation) or using learning algorithms based on more expressive representations (such as statistical relational learning or inductive logic programming).
+(3) For data including categorical variables with different numbers of levels, information gain in decision trees is biased in favor of those attributes with more levels.
 
 6. Improvement/Variants
+Some techniques, often called ensemble methods, construct more than one decision tree:
+(1) Bagging decision trees, an early ensemble method, builds multiple decision trees by repeatedly resampling training data with replacement, and voting the trees for a consensus prediction.
+(2) A Random Forest classifier uses a number of decision trees, in order to improve the classification rate.
+(3) Boosted Trees can be used for regression-type and classification-type problems.
+(4) Rotation forest - in which every decision tree is trained by first applying principal component analysis (PCA) on a random subset of the input features.
 
-7. Explanation in layman term:
-
-8. The original paper is from:
-
-9. Other sources:
+7. Other sources:
