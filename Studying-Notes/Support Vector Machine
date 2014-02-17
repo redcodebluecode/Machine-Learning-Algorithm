@@ -1,6 +1,7 @@
 Something you should know about Support Vector Machine:
 
 1. Brief Introduction
+In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data and recognize patterns, used for classification and regression analysis. An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall on. In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 
 2. Objects
 
@@ -20,6 +21,8 @@ http://www.quora.com/Support-Vector-Machines/What-does-support-vector-machine-SV
 http://www.reddit.com/r/MachineLearning/comments/15zrpp/please_explain_support_vector_machines_svm_like_i/?utm_source=twitterfeed&utm_medium=twitter
 
 8. The original paper is from :
+The original SVM algorithm was invented by Vladimir N. Vapnik and the current standard incarnation (soft margin) was proposed by Corinna Cortes and Vapnik in 1995.
+http://link.springer.com/article/10.1007%2FBF00994018
 
 9. Other sources:
 http://www.cs.columbia.edu/~kathy/cs4701/documents/jason_svm_tutorial.pdf
