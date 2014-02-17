@@ -4,18 +4,46 @@ Something you should know about Support Vector Machine:
 In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data and recognize patterns, used for classification and regression analysis. An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall on. In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 
 2. Objects
-(1) It is a supervised learning model for classification and regression.
+(1) It is a supervised learning model for classification and regression.  SVM supports both regression and classification tasks and can handle multiple continuous and categorical variables.
 (2) Kernal Trick is the essential part of the algorithm. There are multiple choices of the Kernal format.
+(3) http://www.statsoft.com/textbook/graphics/SVMIntro3.gif
+The illustration above shows the basic idea behind Support Vector Machines. Here we see the original objects (left side of the schematic) mapped, i.e., rearranged, using a set of mathematical functions, known as kernels. The process of rearranging the objects is known as mapping (transformation). Note that in this new setting, the mapped objects (right side of the schematic) is linearly separable and, thus, instead of constructing the complex curve (left schematic), all we have to do is to find an optimal line that can separate the GREEN and the RED objects.
 
 3. Algorithm
 (1) Assumptions
+To construct an optimal hyperplane, SVM employs an iterative training algorithm, which is used to minimize an error function. According to the form of the error function, SVM models can be classified into four distinct groups:
+
+Classification SVM Type 1 (also known as C-SVM classification)
+Classification SVM Type 2 (also known as nu-SVM classification)
+Regression SVM Type 1 (also known as epsilon-SVM regression)
+Regression SVM Type 2 (also known as nu-SVM regression)
 
 (2) Steps
 
 
+
 4. Advantages
+(1) It has a regularisation parameter, which makes the user think about avoiding over-fitting. 
+(2) It uses the kernel trick, so you can build in expert knowledge about the problem via engineering the kernel. 
+(3) An SVM is defined by a convex optimisation problem (no local minima) for which there are efficient methods (e.g. SMO). 
+(4) It is an approximation to a bound on the test error rate, and there is a substantial body of theory behind it which suggests it should be a good idea.
+(5) By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating solvent from insolvent companies, which needs not be linear and even needs not have the same functional form for all data, since its function is non-parametric and operates locally. As a consequence they can work with financial ratios, which show a non-monotone relation to the score and to the probability of default, or which are non-linearly dependent, and this without needing any specific work on each non-monotone variable.
+(6) Since the kernel implicitly contains a non-linear transformation, no assumptions about the functional form of the transformation, which makes data linearly separable, is necessary. The transformation occurs implicitly on a robust theoretical basis and human expertise judgement beforehand is not needed.
+(7) SVMs provide a good out-of-sample generalization, if the parameters C and r (in the case of a Gaussian kernel) are appropriately chosen. This means that, by choosing an appropriate generalization grade, SVMs can be robust, even when the training sample has some bias.
+(8) SVMs deliver a unique solution, since the optimality problem is convex. This is an advantage compared to Neural Networks, which have multiple solutions associated with local minima and for this reason may not be robust over different samples.
+(9) With the choice of an appropriate kernel, such as the Gaussian kernel, one can put more stress on the similarity between companies, because the more similar the financial structure of two companies is, the higher is the value of the kernel. Thus when classifying a new company, the values of its financial ratios
+are compared with the ones of the support vectors of the training sample which are more similar to this new company. This company is then classified according to with which group it has the greatest similarity.
 
 5. Disadvantages
+(1) The disadvantages are that the theory only really covers the determination of the parameters for a given value of the regularisation and kernel parameters and choice of kernel. In a way the SVM moves the problem of over-fitting from optimising the parameters to model selection. Sadly kernel models can be quite sensitive to over-fitting the model selection criterion, see
+
+G. C. Cawley and N. L. C. Talbot, Over-fitting in model selection and subsequent selection bias in performance evaluation, Journal of Machine Learning Research, 2010. Research, vol. 11, pp. 2079-2107, July 2010. 
+
+Note however this problem is not unique to kernel methods, most machine learning methods have similar problems. The hinge loss used in the SVM results in sparsity. However, often the optimal choice of kernel and regularisation parameters means you end up with all data being support vectors. If you really want a sparse kernel machine, use something that was designed to be sparse from the outset (rather than being a useful byproduct), such as the Informative Vector Machine. The loss function used for support vector regression doesn't have an obvious statistical intepretation, often expert knowledge of the problem can be encoded in the loss function, e.g. Poisson or Beta or Gaussian. Likewise in many classification problems youa ctually want the probability of class membership, so it would be better to use a method like Kernel Logistic Regression, rather than post-process the output of the SVM to get probabilities.
+
+(2) A common disadvantage of non-parametric techniques such as SVMs is the lack of transparency of results. SVMs cannot represent the score of all companies as a simple parametric function of the financial ratios, since its dimension may be very high. It is neither a linear combination of single financial ratios nor has it another simple functional form. The weights of the financial ratios are not constant. Thus the marginal contribution of each financial ratio to the score is variable. Using a Gaussian kernel each company has its own weights according to the difference between the value of their own financial ratios and those of the support vectors of the training data sample.
+Interpretation of results is however possible and can rely on graphical visualization, as well as on a local linear approximation of the score. The SVM threshold can be represented within a bi-dimensional graph for each pair of financial ratios. This visualization technique cuts and projects the multidimensional feature space as well as the multivariate threshold function separating solvent and insolvent companies on a bi-dimensional one, by fixing the values of the other financial ratios equal to the values of the company,
+which has to be classified. By this way, different companies will have different threshold projections.
 
 6. Improvement/Variants
 
