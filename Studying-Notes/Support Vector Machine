@@ -19,7 +19,7 @@ Regression SVM Type 1 (also known as epsilon-SVM regression)
 Regression SVM Type 2 (also known as nu-SVM regression)
 
 (2) Steps
-
+http://www.statsoft.com/Textbook/Support-Vector-Machines
 
 
 4. Advantages
@@ -45,7 +45,11 @@ Note however this problem is not unique to kernel methods, most machine learning
 Interpretation of results is however possible and can rely on graphical visualization, as well as on a local linear approximation of the score. The SVM threshold can be represented within a bi-dimensional graph for each pair of financial ratios. This visualization technique cuts and projects the multidimensional feature space as well as the multivariate threshold function separating solvent and insolvent companies on a bi-dimensional one, by fixing the values of the other financial ratios equal to the values of the company,
 which has to be classified. By this way, different companies will have different threshold projections.
 
-6. Improvement/Variants
+6. Extensions
+(1) Multiclass SVM
+(2) Transductive support vector machines
+(3) Structured SVM
+(4) Regression - support vector regression (SVR),  least squares support vector machine (LS-SVM)
 
 7. Explanation in layman term:
 http://www.quora.com/Support-Vector-Machines/What-does-support-vector-machine-SVM-mean-in-laymans-terms
