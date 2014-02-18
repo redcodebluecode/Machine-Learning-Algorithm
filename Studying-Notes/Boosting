@@ -1,1 +1,4 @@
 Something you should know about Boosting:
+
+1. Summary
+Build multiple weak classifers, and combine them to make a strong one.
