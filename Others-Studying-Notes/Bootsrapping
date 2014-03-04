@@ -33,9 +33,9 @@ i) Time series: Simple block bootstrap
 In the (simple) block bootstrap, the variable of interest is split into non-overlapping blocks.
 
 ii) Time series: Moving block bootstrap
-In the moving block bootstrap, introduced by Künsch (1989),[18] data is split into n-b+1 overlapping blocks of length b: Observation 1 to b will be block 1, observation 2 to b+1 will be block 2 etc. Then from these n-b+1 blocks, n/b blocks will be drawn at random with replacement. Then aligning these n/b blocks in the order they were picked, will give the bootstrap observations.
+In the moving block bootstrap, introduced by Künsch (1989), data is split into n-b+1 overlapping blocks of length b: Observation 1 to b will be block 1, observation 2 to b+1 will be block 2 etc. Then from these n-b+1 blocks, n/b blocks will be drawn at random with replacement. Then aligning these n/b blocks in the order they were picked, will give the bootstrap observations.
 
-This bootstrap works with dependent data, however, the bootstrapped observations will not be stationary anymore by construction. But, it was shown that varying randomly the block length can avoid this problem.[19]
+This bootstrap works with dependent data, however, the bootstrapped observations will not be stationary anymore by construction. But, it was shown that varying randomly the block length can avoid this problem.
 
 iii) Cluster data: block bootstrap
 Cluster data describes data where many observations per unit are observed. This could be observing many firms in many states, or observing students in many classes. In such cases, the correlation structure is simplified, and one does usually make the assumption that data is correlated with a group/cluster, but independent between groups/clusters. The structure of the block bootstrap is easily obtained (where the block just corresponds to the group), and usually only the groups are resampled, while the observations within the groups are left unchanged. Cameron et al. (2008) discusses this for clustered errors in linear regression.
